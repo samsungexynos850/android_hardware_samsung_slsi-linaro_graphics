@@ -21,8 +21,8 @@ LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../include \
-	$(TOP)/hardware/samsung_slsi/exynos/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libexynosutils
+	$(TOP)/hardware/samsung_slsi-linaro/exynos/include \
+	$(TOP)/hardware/samsung_slsi-linaro/exynos/libexynosutils
 
 LOCAL_SRC_FILES := MppFactory.cpp
 LOCAL_MODULE_TAGS := optional
@@ -36,5 +36,5 @@ ifeq ($(BOARD_USES_VENDORIMAGE), true)
 LOCAL_PROPRIETARY_MODULE := true
 endif
 
-include $(TOP)/hardware/samsung_slsi/exynos/BoardConfigCFlags.mk
+include $(TOP)/hardware/samsung_slsi-linaro/exynos/BoardConfigCFlags.mk
 include $(BUILD_SHARED_LIBRARY)
