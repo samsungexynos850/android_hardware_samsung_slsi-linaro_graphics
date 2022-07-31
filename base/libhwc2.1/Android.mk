@@ -34,6 +34,7 @@ LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES += \
+	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/include \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/libhwc2.1/libdevice \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/libhwc2.1/libmaindisplay \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/libhwc2.1/libexternaldisplay \
