@@ -21,7 +21,7 @@
 #include <exynos-hwjpeg.h>
 #include "hwjpeg-internal.h"
 
-CHWJpegV4L2Compressor::CHWJpegV4L2Compressor(): CHWJpegCompressor("/dev/video12")
+CHWJpegV4L2Compressor::CHWJpegV4L2Compressor(const char *path): CHWJpegCompressor(path)
 {
     memset(&m_v4l2Format, 0, sizeof(m_v4l2Format));
     memset(&m_v4l2SrcBuffer, 0, sizeof(m_v4l2SrcBuffer));

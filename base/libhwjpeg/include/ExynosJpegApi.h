@@ -55,6 +55,7 @@
 #define V4L2_PIX_FMT_JPEG_411 v4l2_fourcc('J', 'P', 'G', '1')
 #endif
 
+const char jpeg_node[2][16] = {"/dev/video12", "/dev/video13"};
 class ExynosJpegEncoder {
     /*
      * ExynosJpedgEncoder class is actually a derived class of
@@ -96,7 +97,7 @@ protected:
 
     virtual bool EnsureFormatIsApplied() { return __EnsureFormatIsApplied(); }
 public:
-    ExynosJpegEncoder(): m_hwjpeg(),
+    ExynosJpegEncoder(unsigned int index = 0): m_hwjpeg(jpeg_node[index]),
           m_iInBufType(JPEG_BUF_TYPE_USER_PTR), m_iOutBufType(JPEG_BUF_TYPE_USER_PTR), m_uiState(0),
           m_nQFactor(0), m_nWidth(0), m_nHeight(0), m_v4l2Format(0), m_jpegFormat(0), m_nStreamSize(0)
     {

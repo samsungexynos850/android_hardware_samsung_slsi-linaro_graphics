@@ -556,7 +556,7 @@ class CHWJpegV4L2Compressor : public CHWJpegCompressor, private CHWJpegFlagManag
     ssize_t DQBuf(size_t *secondary_stream_size);
     bool StopStreaming();
 public:
-    CHWJpegV4L2Compressor();
+    CHWJpegV4L2Compressor(const char *path);
     virtual ~CHWJpegV4L2Compressor();
 
     unsigned int GetHWDelay() { return m_uiHWDelay; }

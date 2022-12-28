@@ -34,4 +34,5 @@ ifeq ($(BOARD_USES_VENDORIMAGE), true)
     LOCAL_PROPRIETARY_MODULE := true
 endif
 
+include $(TOP)/hardware/samsung_slsi-linaro/graphics/base/BoardConfigCFlags.mk
 include $(BUILD_SHARED_LIBRARY)
