@@ -25,6 +25,13 @@
 
 #define USE_MODULE_ATTR
 
+/* Define Identifiers */
+enum {
+	MPP_ATTR_CUSTOM_ROT             = 0x00000400,
+	MPP_ATTR_ROT_180                = 0x00000100,
+	MPP_ATTR_ROT_270                = 0x00000200,
+};
+
 /* Basic supported features */
 static feature_support_t feature_table[] =
 {
